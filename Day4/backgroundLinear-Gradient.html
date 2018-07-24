@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Day-4</title>
+    <style>
+        /*  Background Transition */
+        body{
+            transition: background-color 2s;
+        }
+    </style>
+</head>
+<body>
+<h1 id="paragraf">Background Linear Gradient Example</h1>
+<!-- <button type="button" name="button" onclick="boya()">Arka Plan</button> -->
+<script type="text/javascript">
+    /*  Document Ready */
+    (function(boya, baseObj) {
+    })("docReady", window);
+
+    document.getElementById("paragraf").style.color="blue";
+    document.getElementById("paragraf").style.background="#fff";
+    document.getElementById("paragraf").style.width="400px";
+    document.getElementById("paragraf").style.margin="0 auto";
+    document.getElementById("paragraf").style.marginTop="30px";
+
+    function getRandomInt(min,max) {
+        return Math.floor(Math.random() * (max-min+1))+min;
+    }
+    var boya = setInterval(function () {
+        var red = getRandomInt(0,255);
+        var green = getRandomInt(0,255);
+        var blue = getRandomInt(0,255);
+
+        var red2 = getRandomInt(0,255);
+        var green2 = getRandomInt(0,255);
+        var blue2 = getRandomInt(0,255);
+
+        document.getElementById("paragraf").style.color = "rgb("+red+","+blue+","+green+")";
+        document.body.style.background = "rgb("+red+","+blue+","+green+")";
+        document.body.style.background = "linear-gradient(to bottom right, rgb(\"+red+\",\"+blue+\",\"+green+\"), rgb(\"+red2+\",\"+blue2+\",\"+green2+\"))";
+
+    },1000);
+</script>
+</body>
+</html>

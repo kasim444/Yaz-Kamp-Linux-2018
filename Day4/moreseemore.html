@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Daha da see more</title>
+    <style>
+        body{
+            padding:15px;
+        }
+        .card{
+            border:1px solid grey;
+            border-radius: 5px;
+            margin: 15px 0;
+            padding: 15px;
+        }
+        p+p{
+            display: none;
+        }
+        .seeless{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Haber Başlığı</h2>
+    <p>1-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequuntur doloremque eaque enim eum fugiat iste modi molestiae, molestias neque provident tempore veritatis. Dicta, est, magnam? At, culpa, suscipit?</p>
+    <p>2-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequuntur doloremque eaque enim eum fugiat iste modi molestiae, molestias neque provident tempore veritatis. Dicta, est, magnam? At, culpa, suscipit?</p>
+    <p>3-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequuntur doloremque eaque enim eum fugiat iste modi molestiae, molestias neque provident tempore veritatis. Dicta, est, magnam? At, culpa, suscipit?</p>
+    <a href="#" class="seemore">Devamı...</a>
+    <a href="#" class="seeless">Azalt...</a>
+</div>
+<div class="card">
+    <h2>Haber Başlığı</h2>
+    <p>1-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequuntur doloremque eaque enim eum fugiat iste modi molestiae, molestias neque provident tempore veritatis. Dicta, est, magnam? At, culpa, suscipit?</p>
+    <p>2-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequuntur doloremque eaque enim eum fugiat iste modi molestiae, molestias neque provident tempore veritatis. Dicta, est, magnam? At, culpa, suscipit?</p>
+    <p>3-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur consequuntur doloremque eaque enim eum fugiat iste modi molestiae, molestias neque provident tempore veritatis. Dicta, est, magnam? At, culpa, suscipit?</p>
+    <a href="#" class="seemore">Devamı...</a>
+    <a href="#" class="seeless">Azalt...</a>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $(".seemore").click(function(event){
+        event.preventDefault();
+        $(this).hide(1000);
+        $(this).parent().find(".seeless").fadeIn(1000);
+        $(this).parent().find("p").fadeIn(1000);
+    });
+    $(".seeless").click(function(event){
+        event.preventDefault();
+        $(this).hide(1000);
+        $(this).parent().find(".seemore").fadeIn(1000);
+        $(this).parent().find("p:not(:first)").fadeOut(1000);
+    });
+</script>
+</body>
+</html>

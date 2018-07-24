@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>JqueryForExample</title>
+</head>
+<body>
+<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur debitis, dolore eum eveniet expedita illo labore, maiores nemo nulla, porro praesentium quaerat quibusdam quo sequi temporibus vel vero voluptas.</p>
+<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur debitis, dolore eum eveniet expedita illo labore, maiores nemo nulla, porro praesentium quaerat quibusdam quo sequi temporibus vel vero voluptas.</p>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    setInterval(function () {
+        $("p").fadeToggle("slow", "linear").first().css("color","white").css("background","green");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+.box{
+    border:1px solid lightgrey;
+    padding: 35px 35px 15px 35px;
+    margin-bottom: 100px;
+}
+.card-title{
+    color:#2eb1c4;
+}
+
+.btn-group button{
+    margin-left:5px;
+    margin-right:5px;
+}
+
+footer{
+    background: #007bff;
+    color: white;
+}

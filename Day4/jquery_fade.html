@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery- 2.Örnek</title>
+    <style>
+        p+p {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi explicabo id molestias quod! Aperiam consectetur fugit in, incidunt inventore labore laudantium nemo nostrum nulla quia, reiciendis repellat temporibus tenetur voluptate.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur cum dolore, ducimus eum expedita explicabo hic laudantium minus molestias nihil officia perferendis porro ratione rem reprehenderit repudiandae sequi voluptates?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam aliquid aperiam blanditiis commodi culpa eius excepturi nam, nihil? Amet eaque est nisi nostrum perferendis, quae quidem suscipit tempore velit?</p>
+<a href="#" class="see-more">Devamı...</a>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(".see-more").click(function (event) {
+        event.preventDefault();
+        $(this).hide();
+        $("p").fadeIn();
+    });
+</script>
+</body>
+</html>
