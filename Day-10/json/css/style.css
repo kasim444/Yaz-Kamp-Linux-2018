@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+ul li {
+    text-align: left;
+}
+
+.ana-baslik {
+    color: #7f0000;
+}
+
+.ikinci-baslik {
+    color: #b71c1c
+}
+
+.ucuncu-baslik {
+    color: #f05545;
+}
+
+.alt-baslik {
+    color: #9c64a6;
+}
+
+.alt-cizgi {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+}
+
+.alt-cizgi::after {
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+
+.alt-cizgi::after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+}

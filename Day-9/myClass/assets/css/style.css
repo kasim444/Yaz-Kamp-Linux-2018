@@ -1,0 +1,46 @@
+body {
+    background-image: url(../img/bg.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#detail {
+    background-image: url(../img/banner.jpeg);
+    background-size: auto;
+}
+
+main {
+    height: 100%;
+    width: 40%;
+    margin: 20px 58%;
+    padding: auto;
+    text-align: center;
+    border: 1px solid #CCC;
+    background: #d0ede9;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 4px #569d9b;
+}
+
+#main {
+    background: #d0ede9f4;
+}
+
+h1 {
+    color: #b91520;
+}
+
+ul li {
+    margin-left: 20%;
+    padding: 5px;
+    list-style-type: circle;
+    text-align: left;
+}
+
+.link {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: cornflowerblue;
+}
