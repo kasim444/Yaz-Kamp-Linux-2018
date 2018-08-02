@@ -69,6 +69,10 @@ Bu sayede fonksiyondan return ile geri döndürülmüş fonksiyonu artık yeni b
 
     Veritabanı sunucusudur. Php den tamamen bağımsızdır.
 
+    CRUD işlemleri yapıyoruz(Create, Read, Update, Delete
+    )
+    Biz ya phpmyadmin ya da adminer php kullanıyoruz. 
+
     Not: unique değerlerini primary_key i belirlerken gerçek verileri kullanmamız iyi olmaz.
     Gerçek veriler daha sonra tekrarlabileceği için auto inc kullanmamız daha iyi olur.
 
@@ -90,3 +94,49 @@ Bu sayede fonksiyondan return ile geri döndürülmüş fonksiyonu artık yeni b
     select * from ogrenciler limit $pass,$sayfaAdedi;
 
     Bir tablomuzu farklı bir tablo ile ilişkilendirmek istiyorsak foreign_key ler ile iki tabloyu eşleyebiliyoruz.
+
+    Sıralama için ORDER BY ad DESC, soyad DESC
+        desc => azalan
+        asc  => artan
+
+    select count(id) as count from articles => id sütünunda kaç tane satır varsa onun değerini dönecektir.
+
+
+11- PDO (Php Data Object)
+
+
+    1- Veritabanına bağlantı
+        $pdo = new PDO("mysql:host=sunucu;dbname=oyk_2018_blog;charset=utf8", "root", "root");  
+
+    2- $connection->fetch()
+        Bu ifade sadece ilk satırı getiri
+
+    3- $connection->fetch(PDO::FECTH_ASSOC) Dizi tipinde geri döndürür. 
+       $connection->fetch(PDO::FECTH_OBJ) Obje tipinde geri döndürür.
+
+
+    4- fetchall tüm diziyi almak istediğimizde kullanıyoruz
+
+    5- $connection->query("SELECT * FROM articles ORDER BY id DESC)
+
+    6-  prepare ve execute kullanımı
+        prepare ile sorguyu hazırlıyoruz
+        sonrasında bu sorguyu çalıştırmak istediğimiz zaman execute methodunu kullanırız.
+
+        prepare ile sorgu yazdığımızda eğer bir değişken var ise ($_GET['user_id']) 
+        sorgu içerisinde ? işareti ile yada :indis yazıp bunu execute(array('indis'=> value)) olarak belirtlebiliyoruz.
+
+        $connection->prepare("SELECT * FROM articles WHERE id=:id");
+        $connection->execute(array('id'=$_GET['user_id']));
+
+        şeklinde kullanıyoruz.
+
+        prepare'ı güvenlik nedeni ile ve daha efektif olduğu için kullanmaktayız.
+        prepare yerine query methoduda kullanabiliriz fakat sql injection olma ihtimaline karşın değişkenleri prepare methodunda daha güvenli halde çalıştırabiliyoruz.
+        execute ise tanımladığımız sorguyu çalıştırmaya yarıyor.
+
+
+    5-  exec sorgudan dönen satır sayısını döndürür.
+    
+
+12- Php de ekrana birşey basmadığımız(html) sürece php etiketini kapatmamız doğru olmaz.
