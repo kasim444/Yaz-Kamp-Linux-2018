@@ -1,12 +1,30 @@
 # Yaz-Kamp-Linux-2018
 Yaz kampı linuxdaki günlük php çalışmalarım.
 
+Bakmam Gerekenler
+    - PSR (PHP STANDART )
+    - Composer
+    - Php the right way
+    - Migration at laravel
+    - tdd ( test driven development )
+    - vender
+
+
 Tavsiyeler
 1- İngilizce
 2- Kaynak Kod Okuma
 3- Bol bol uygulama geliştirme  
 5- Uygulama yapmaya başlamadan önce yorum satırlarıyla ne yapmamız gerektiğini planlamak
 4- Yılmamak
+
+
+Çalışmam Gereken Noktalar:
+    1- Session ve Cookie ile oturum işlemi
+    2- PDO ile admin işlemleri güncelle, sil gibi komutların nasıl işlendiğini öğrenme.
+    3- Object orianted
+    4- Composer
+    5- Mvc
+
 
 Notlar:
 
@@ -140,3 +158,35 @@ Bu sayede fonksiyondan return ile geri döndürülmüş fonksiyonu artık yeni b
     
 
 12- Php de ekrana birşey basmadığımız(html) sürece php etiketini kapatmamız doğru olmaz.
+
+13- Php sihirli sabitler
+
+    __DIR__  => şuanda  bulunduğumuz dizini veriyor.
+    <?php include __DIR__."/../header.php"; ?>
+
+
+14- bütün çıktılar için verilerin heasplanması bitmeden çıktıya odaklanmamız gerekir.
+yaptığımız hesaplamara sonucu views sayfasında sonucu elde ettiğimiz değişkenleri o zaman ekrana basarız.
+
+
+15- Fetch ile fetch all arasındaki fark.
+
+    1.yol
+
+    while($satir = $butunSatirlariSorgula->fetch(PDO::FETCH_OBJ){
+     echo $satir->$title  " .  <br>;
+    }
+
+    2.yol
+
+    $butunSatirlar = 
+
+
+
+16- Klavye Kısayolları
+
+    crtl shift l => seçili olanların en sağına imleci koyuyuor.
+
+
+17- Bir sınıftan yeni bir obje oluşturulduğu anda ilk çalışan kod parçacıklarıdır.
+
